@@ -1,4 +1,5 @@
-# Implementation of Multivariate Linear Regression
+# Implementation of Multivariate Linear Regressio
+## date: 13-05-2025
 ## Aim
 To write a python program to implement multivariate linear regression and predict the output.
 ## Equipment’s required:
@@ -21,24 +22,24 @@ Print the predicted output.
 ```
 \*
 #Multivariate Linear Regression
-#Developed by : PRITHIVIRAJAN V
-#Register Number : 212223100042
+#Developed by hemanth yadav
+#Register Number : 212224100033
 \*
-import pandas as pd
-from sklearn import linear_model
-
-df=pd.read_csv('/content/cars (1) (1).csv')
-a=df[['Weight','Volume']]
-b=df[['CO2']]
-regr=linear_model.LinearRegression()
-regr.fit(a,b)
-print("Coefficient",regr.coef_)
-print("Intercept",regr.intercept_)
-print("Amount",regr.predict([[3300,1300]]))
+ import pandas as pd
+ from sklearn import linear_model
+ df = pd.read_csv("car.csv")
+ X = df[['Weight', 'Volume']]
+ y = df['CO2']
+ regr = linear_model.LinearRegression()
+ regr.fit(X, y)
+ print('Coefficients:', regr.coef_)
+ print('Intercept:',regr.intercept_)
+ predictedCO2 = regr.predict([[3300, 1300]])
+ print('Predicted CO2 for the corresponding weight and volume',predictedCO2)
 ```
 ## Output:
+![Screenshot 2025-05-13 211706](https://github.com/user-attachments/assets/772740fe-1944-4c14-95ba-2512b9a406a5)
 
-![image](https://github.com/Prithivirajan2911/Multivariate-Linear-Regression/assets/147020085/e875da86-378f-40dd-b8c7-f3f4c0ea7342)
 
 ## Result
 Thus the multivariate linear regression is implemented and predicted the output using python program.
